@@ -77,7 +77,7 @@ In this program I do the following: verify the existence of a phase transition i
 k-coloring for k = 2 and k = 3, examine the behavior of an approximate greedy algorithm
 on the 3-Coloring problem, and examine the behavior/performance of an exact algorithm
 for 3-Coloring on small instances. Of course, all of these results are true in the limit
-of n->infinity, so the results simply give a taste of the behavior. 
+of n->infinity, so the results simply give a taste of the behavior.
 
 [1] Mouatadid, Introduction to Complexity Theory 2014
 

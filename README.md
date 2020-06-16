@@ -57,8 +57,9 @@ of an edge between all nC2 pairs of vertices. The average degree of a given
 vertex is ~pn and the degree distribution in the thermodynamic (large n) limit
 is Poisson. One can prove (which I will not reproduce here) that there is a sharp
 threshold p = log(n)/n at which the graph is almost surely connected. Furthermore,
-there is a threshold c_core so G(n,p = c/n) has a k-core is c > c_core and
-no k_core if c < c_core. 
+there is a threshold c_core so that 
+
+    G(n,p = c/n) has a k-core is c > c_core and no k_core if c < c_core. 
 
 What is a k-core and why is this relevant? A k-core of a graph is a subgraph
 of G of the largest set S of vertices where each vertex in S is connected to at
@@ -66,7 +67,8 @@ least k vertices in S [1]. It is relevant because of the following fact: If a
 graph G does not have a k-core, it is k-colorable.
 
 This means that there is also a critical value c_k > c_core such that:
-    Pr(G(n,p = c/n) is k-colorable) = {1 if c < c_k, 0 if c > c_k}
+
+    lim n->infinity Pr(G(n,p = c/n) is k-colorable) = {1 if c < c_k, 0 if c > c_k}
 
 Finding the value of c_core only provides a lower bound on c_k, upper bounding
 it requires more sophisticated analytical techniques. However, studying it

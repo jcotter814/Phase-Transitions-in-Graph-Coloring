@@ -35,8 +35,8 @@ extends far deeper.
 So how do we connect the dots between the numerical evidence that 3-Coloring
 exhbits a phase transition in its difficulty and the rich physics literature
 on phase transitions? What is the so called order parameter controlling the
-transition between easy and hard instances? We do so by studying the behavior 
-of 3-Colorability on random graphs. 
+transition between easy and hard instances? We can understand this better by 
+studying the behavior of 3-Colorability on random graphs. 
 
 First, an extremely brief primer on Erdos-Renyi random graphs. The G(n,p) Erdos
 Renyi random graph model is a graph G with n vertices and a fixed probability p

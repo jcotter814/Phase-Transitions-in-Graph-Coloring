@@ -59,7 +59,7 @@ is Poisson. One can prove (which I will not reproduce here) that there is a shar
 threshold p = log(n)/n at which the graph is almost surely connected. Furthermore,
 there is a threshold c_core so that 
 
-    G(n,p = c/n) has a k-core is c > c_core and no k_core if c < c_core. 
+    G(n,p = c/n) has a k-core if c > c_core and no k_core if c < c_core. 
 
 What is a k-core and why is this relevant? A k-core of a graph is a subgraph
 of G of the largest set S of vertices where each vertex in S is connected to at

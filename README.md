@@ -1,4 +1,17 @@
 # Phase-Transitions-in-Graph-Coloring
+What could physics possibly have to do with computational complexity? A narrow
+view of physics lead one to think: nothing. Physics is about the motion of blocks on 
+inclined planes or the energy levels of hyrdogen, not the asymptotic behavior
+of Turing machines. As it turns out however, there are many surprising and deep connections 
+between the two seemingly disparate fields. On one hand physics informs computer
+science: for example, knowing the laws of quantum mechanics allows one to solve important problems
+such as factoring exponentially faster. In turn computer science informs physics: if one 
+wanted to find the partition function of a three dimensional Ising model for general graphs
+it would be helpful to know that it is #P-hard to do so. So clearly physics shows up in
+complexity theory and vice versa. To me, that is totally surprising and fascinating. Here I
+take a look at phase transitions in NP Complete problems, a beautiful example of physics
+having something to say about computer science. 
+
 3-coloring a graph is a fundamental problem in computer science and one of the
 first problems known to be NP Complete. The problem statement of the general 
 k-coloring problem is as follows [1]:
@@ -38,7 +51,7 @@ on phase transitions? What is the so called order parameter controlling the
 transition between easy and hard instances? We can understand this better by 
 studying the behavior of 3-Colorability on random graphs. 
 
-First, an extremely brief primer on Erdos-Renyi random graphs. The G(n,p) Erdos
+First, a radically condensed primer on Erdos-Renyi random graphs. The G(n,p) Erdos
 Renyi random graph model is a graph G with n vertices and a fixed probability p
 of an edge between all nC2 pairs of vertices. The average degree of a given
 vertex is ~pn and the degree distribution in the thermodynamic (large n) limit
@@ -60,12 +73,10 @@ it requires more sophisticated analytical techniques. However, studying it
 shows some of the deep and fascinating interplay between physics, computational
 complexity and graph theory.
 
-In this program I do the following: numerically verify the discontinous
-emergence of a 3-core in ER random graphs as a function of the average degree
-c, find c_core (and thereby lower bound c_k) and verify the continuous 
-emergence of the 2-core. I also analyze the output of a greedy 3 coloring 
-algorithm below and above the found value of c_core to get a sense of a
-possible upper bound.
+In this program I do the following: verify the existence of a phase transition in
+k-coloring for k = 2 and k = 3, examine the behavior of an approximate greedy algorithm
+on the 3-Coloring problem, and examine the behavior/performance of an exact algorithm
+for 3-Coloring on small instances. 
 
 [1] Mouatadid, Introduction to Complexity Theory 2014
 

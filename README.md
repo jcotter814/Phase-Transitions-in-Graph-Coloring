@@ -4,7 +4,7 @@ view of physics lead one to think: nothing. Physics is about the motion of block
 inclined planes or the energy levels of hyrdogen, not the asymptotic behavior
 of Turing machines. As it turns out however, there are many surprising and deep connections 
 between the two seemingly disparate fields. On one hand physics informs computer
-science: knowing, for example the laws of quantum mechanics allows one to solve important problems
+science: knowing, for example, the laws of quantum mechanics allows one to solve important problems
 such as factoring exponentially faster. In turn computer science informs physics: if one 
 wanted to find the partition function of a three dimensional Ising model for general graphs
 it would be helpful to know that it is #P-hard to do so. So clearly physics shows up in

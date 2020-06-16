@@ -17,7 +17,7 @@ import time
 #a graph is 3-colorable using the greedy approach
 
 #number of vertices
-n = 1000
+n = 3000
 
 #c values
 vals = 50
@@ -48,6 +48,7 @@ colorability /= trials
 k2_results /= trials
 k3_results /= trials
 
+
 #%% Plot results
 
 fig1,(ax1,ax2) = plt.subplots(2,sharex = True)
@@ -64,18 +65,34 @@ ax2.set_xlabel("c")
 ax2.set_title("Percent 3-Colorable vs. Average Degree, Greedy Algorithm")
 ax2.set_ylabel("% 3-Colorable")
 fig1.tight_layout()
-ax2.legend()
+
+"""
+So what do these results mean?
+1. The existence of the phase transition is nothing surprising - that can be 
+proven analytically. The transition for k = 3 is not as sharp/discontinuous
+as it "should" be, but that is simply a finite size effect. The known
+approximate c values for the transition are c = 1, 3.35 for the 2 and 3 core
+respectively. These results for the 2 core agree with that, but the 3-core
+emerges earlier than expected. I expect that increasing the graph size will 
+slide the transition further towards the known value and make it steeper.
+
+2. The performance of the greedy algorithm is also not surprising. In the
+c << c_core cases, it finds a k-coloring and in the c >> c_core cases it 
+does not, as expected. In the region around c_core, i.e. the transition between
+easy and hard, the greedy algorithm fails to find colorings well befor c_core, 
+likely because the solution space in that region is complicated and greedy 
+algorithms easily fall into local minima.
+"""
 
 #%% Next, record both the colorabilibilty and time used by an exact algorithm 
 #for different c values. Have to use smaller graph instances as this algorithm 
 #is exponential in worst case.
 
-
 #number of vertices
 n = 40
 
-#probabilities
-c_arr = np.linspace(0,5,vals)
+#probabilities, look at region around phase transition
+c_arr = np.linspace(1,5,vals)
 p = c_arr/n
 
 #k-colorability
@@ -112,8 +129,11 @@ ax2.set_title("Time taken to Color vs. Average Degree, c")
 ax2.set_ylabel("Seconds")
 fig2.tight_layout()
 
+"""
+What do these results mean?
+1. 
 
-    
+"""
     
 
 

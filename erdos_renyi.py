@@ -224,16 +224,6 @@ class Erdos_Renyi:
         else:
             return False
     
-if __name__ == "__main__":
-    n = 20
-    c = 10
-    p = c/n
-    e = Erdos_Renyi(n,p)
-    k = 3
-    t = e.call_exact(k)
-    
-    
-    
     
     
     

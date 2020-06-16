@@ -28,20 +28,20 @@ p = c_arr/n
 
 #number of trials
 trials = 1
-k = 0
+r = 0
 
 #results
 colorability = np.zeros(vals)
 k2_results = np.zeros(vals)
 k3_results = np.zeros(vals)
 
-while k < trials:
+while r < trials:
     for i,prob in enumerate(p):
         g = er.Erdos_Renyi(n,prob)
         colorability[i] += g.greedy_coloring(3)
         k2_results[i] += g.fraction_in_k_core(2)
         k3_results[i] += (g.fraction_in_k_core(3))
-    k+=1
+    r+=1
 
 #average over trials
 colorability /= trials
@@ -68,7 +68,7 @@ fig1.tight_layout()
 
 """
 So what do these results mean?
-1. The existence of the phase transition is nothing surprising - that can be 
+1. The existence of the phase transition is not surprising - that can be 
 proven analytically. The transition for k = 3 is not as sharp/discontinuous
 as it "should" be, but that is simply a finite size effect. The known
 approximate c values for the transition are c = 1, 3.35 for the 2 and 3 core
@@ -93,6 +93,7 @@ algorithms easily fall into local minima.
 n = 35
 
 #probabilities, look at region around phase transition
+vals = 25
 c_arr = np.linspace(1,5,vals)
 p = c_arr/n
 
@@ -129,6 +130,7 @@ ax1.set_ylabel("Percent 3-Colorable")
 ax2.plot(c_arr,times,"*")
 ax2.set_title("Time taken to Color vs. Average Degree, c")
 ax2.set_ylabel("Seconds")
+ax2.set_xlabel("c")
 fig2.tight_layout()
 
 """

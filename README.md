@@ -1,6 +1,6 @@
 # Phase-Transitions-in-Graph-Coloring
 What could physics possibly have to do with computational complexity? A narrow
-view of physics lead one to think: nothing. Physics is about the motion of blocks on 
+view of physics leads one to think: nothing. Physics is about the motion of blocks on 
 inclined planes or the energy levels of hyrdogen, not the asymptotic behavior
 of Turing machines. As it turns out however, there are many surprising and deep connections 
 between the two seemingly disparate fields. On one hand physics informs computer
@@ -20,6 +20,7 @@ k-coloring problem is as follows [1]:
     c: V->{1,..,k} such that no adjacent vertices have the same color, i.e.
     ∀(u,v) ∈ E, c(u) != c(v).
 
+
 The general k-coloring has applications in everything from scheduling, register
 allocation in a computer, solving a sodoku puzzle, (literally) coloring a map
 and even finding the ground state of a q state Potts spin glass [2](a generalization
@@ -35,10 +36,12 @@ One observation made however, was that 3-Coloring a graph is often actually
 easy in practice and does not suffer from the exponential worst case behavior
 expected. Similar behavior is observed in practical solutions to other 
 prototypical NP Complete problems such as 3SAT and Integer Partitioning [2]. 
-This begs an obvious question (at least to a physicist): what is the point at 
+This leads to an obvious question (at least to a physicist): what is the point at 
 which these problems transition from easy to hard and what does that transition 
 depend on? Numerical evidence shows the existence of a phase transition 
-between the problems easily soluble in practice and those that are hard. A phase 
+between instances that are colorable and uncolorable. It is at that point between
+instances that are easily determined to be colorable and those that are easily determined
+to be uncolorable that the complexity transitions from easy to hard. A phase 
 transition in physics is the sharp (or discontinous) change in the bulk properties 
 of a material due to a small change in some parameter of the system past a critical 
 point. The change in phase of ice to liquid water at 0 degrees celsius is one obvious 

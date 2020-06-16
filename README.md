@@ -83,6 +83,6 @@ of n->infinity, so the results simply give a taste of the behavior.
 
 [2] Mulet et al, Coloring Random Graphs 2018
 
-[3] Mertaes,The Easiest Hard Problem: Number Partitioning 2003
+[3] Mertens,The Easiest Hard Problem: Number Partitioning 2003
 
 [4] Moore, Mertens, The Nature of Computation 2011

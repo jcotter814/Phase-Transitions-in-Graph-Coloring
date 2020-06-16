@@ -90,7 +90,7 @@ algorithms easily fall into local minima.
 
 #number of vertices, have to keep this small because of exponential worst case
 #run time
-n = 35
+n = 30
 
 #probabilities, look at region around phase transition
 vals = 25

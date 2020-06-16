@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @author: James Cotter
-A class for the Erdos-Renyi random graph.
+A class for the Erdos-Renyi G(n,p) random graph model.
 """
 
 import random
@@ -174,7 +174,7 @@ class Erdos_Renyi:
             color_arr: array, list of colorings
             color: int, "color" represented by an int \in {1,..,k}
         Outputs:
-            bool, whether color can be used on that vertex
+            bool, whether color can be used on that vertex.
         """
         for i in self.adj_list[vertex]:
             if (color_arr[i] == color):

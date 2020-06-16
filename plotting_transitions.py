@@ -94,7 +94,7 @@ n = 35
 
 #probabilities, look at region around phase transition
 vals = 25
-c_arr = np.linspace(1,5,vals)
+c_arr = np.linspace(1,4,vals)
 p = c_arr/n
 
 #k-colorability

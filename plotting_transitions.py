@@ -88,8 +88,9 @@ algorithms easily fall into local minima.
 #for different c values. Have to use smaller graph instances as this algorithm 
 #is exponential in worst case.
 
-#number of vertices
-n = 40
+#number of vertices, have to keep this small because of exponential worst case
+#run time
+n = 35
 
 #probabilities, look at region around phase transition
 c_arr = np.linspace(1,5,vals)
@@ -99,6 +100,7 @@ p = c_arr/n
 k = 3
 
 #storing results
+trials = 10
 exact_results = np.zeros(vals)
 times = np.zeros(vals)
 
@@ -131,8 +133,19 @@ fig2.tight_layout()
 
 """
 What do these results mean?
-1. 
+1. It is easy to see the sharp transition between colorable/uncolorable around
+and average degree value of ~2.5. Again, this is below the expected known value
+of c_k = ~3.3, but likely due to finite size effects.
 
+2. One can also observe the divergent time it takes to color at exactly the 
+transition between colorable/uncolorable. This makes sense given the algorithm
+used and is very similar to the behavior of simple SAT solvers like DPPL on
+instances near the critical point. The algorithm works by essentially doing a 
+DFS on the solution tree, so for c << c_k, the solver does very little 
+backtracking and quickly finds a solution. For c >> c_k the algorithm quickly
+finds a contradiction in possible colorings and returns false. Right at the 
+critical point however, the amount of backtracking is maximized and the solver
+spends the maximal amount of time.
 """
     
 

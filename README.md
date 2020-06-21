@@ -1,10 +1,10 @@
 # Phase-Transitions-in-Graph-Coloring
 What could physics possibly have to do with computational complexity? A narrow
-view of physics lead one to think: nothing. Physics is about the motion of blocks on 
+view of physics leads one to think: nothing. Physics is about the motion of blocks on 
 inclined planes or the energy levels of hyrdogen, not the asymptotic behavior
 of Turing machines. As it turns out however, there are many surprising and deep connections 
 between the two seemingly disparate fields. On one hand physics informs computer
-science: knowing, for example the laws of quantum mechanics allows one to solve important problems
+science: knowing, for example, the laws of quantum mechanics allows one to solve important problems
 such as factoring exponentially faster. In turn computer science informs physics: if one 
 wanted to find the partition function of a three dimensional Ising model for general graphs
 it would be helpful to know that it is #P-hard to do so. So clearly physics shows up in
@@ -19,6 +19,7 @@ k-coloring problem is as follows [1]:
     Given an undirected graph G(V,E), assign k colors (labels) to the vertices
     c: V->{1,..,k} such that no adjacent vertices have the same color, i.e.
     ∀(u,v) ∈ E, c(u) != c(v).
+
 
 The general k-coloring has applications in everything from scheduling, register
 allocation in a computer, solving a sodoku puzzle, (literally) coloring a map
@@ -35,10 +36,12 @@ One observation made however, was that 3-Coloring a graph is often actually
 easy in practice and does not suffer from the exponential worst case behavior
 expected. Similar behavior is observed in practical solutions to other 
 prototypical NP Complete problems such as 3SAT and Integer Partitioning [2]. 
-This begs an obvious question (at least to a physicist): what is the point at 
+This leads to an obvious question (at least to a physicist): what is the point at 
 which these problems transition from easy to hard and what does that transition 
 depend on? Numerical evidence shows the existence of a phase transition 
-between the problems easily soluble in practice and those that are hard. A phase 
+between instances that are colorable and uncolorable. It is at that point between
+instances that are easily determined to be colorable and those that are easily determined
+to be uncolorable that the complexity transitions from easy to hard. A phase 
 transition in physics is the sharp (or discontinous) change in the bulk properties 
 of a material due to a small change in some parameter of the system past a critical 
 point. The change in phase of ice to liquid water at 0 degrees celsius is one obvious 
@@ -76,10 +79,10 @@ shows some of the deep and fascinating interplay between physics, computational
 complexity and graph theory.
 
 In this program I do the following: verify the existence of a phase transition in
-k-coloring for k = 2 and k = 3, examine the behavior of an approximate greedy algorithm
-on the 3-Coloring problem, and examine the behavior/performance of an exact algorithm
-for 3-Coloring on small instances. Of course, all of these results are true in the limit
-of n->infinity, so the results simply give a taste of the behavior.
+the emergence of a k-core for k = 2 and k = 3, examine the behavior of an approximate 
+greedy algorithm on the 3-Coloring problem, and examine the behavior/performance of an 
+exact algorithm for 3-Coloring on small instances. Of course, all of these results are 
+true in the limit of n->infinity, so the results simply give a taste of the behavior.
 
 [1] Mouatadid, Introduction to Complexity Theory 2014
 

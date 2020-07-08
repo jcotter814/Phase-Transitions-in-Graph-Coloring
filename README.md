@@ -9,7 +9,7 @@ such as factoring exponentially faster. In turn computer science informs physics
 wanted to find the partition function of a three dimensional Ising model for general graphs
 it would be helpful to know that it is #P-hard to do so. So clearly physics shows up in
 complexity theory and vice versa. To me, that is totally surprising and fascinating. Here I
-take a look at phase transitions in NP Complete problems, a beautiful example of physics
+take a look at phase transitions in NP Complete problems, a nice example of physics
 having something to say about computer science. 
 
 3-coloring a graph is a fundamental problem in computer science and one of the

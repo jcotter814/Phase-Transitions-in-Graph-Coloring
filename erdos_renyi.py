@@ -186,9 +186,7 @@ class Erdos_Renyi:
         """
         Finds an exact coloring of the graph using a recursive algorithm.
         Still O(k^n) in the worst case, but smarter than an unstructured
-        search of all possibilities. Based on the backtracking algorithm
-        given here: https://www.geeksforgeeks.org/m-coloring-problem-backt
-        racking-5/ (they use an adjacency matrix, not list).
+        search of all possibilities.
         Inputs:
             ind: int, node
             colors: array, colorings
